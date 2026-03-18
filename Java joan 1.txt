@@ -1,0 +1,173 @@
+class Main {
+    public static void main(String[] args)
+    {
+        float f=35.55f;
+        double g=45.55;
+        System.out.println(f);
+        System.out.println(g);
+        int a=5;
+        long b=55000;
+        short d=45;
+        byte e=10;
+        boolean age=true;
+        boolean or=false;
+        char s='5';
+        String c="petrina";
+        System.out.println(a+" "+b+" "+d+" "+e+" "+age+" "+or+" "+s+" "+c);
+        /*System.out.println(a);
+        System.out.println(b);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(age);
+        System.out.println(or);
+        System.out.println(s);
+        System.out.println(c);*/
+        
+	//terinary
+        int x=5;
+        int z=6;
+        int v=x>=z?x:z;
+        System.out.println(v);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+
+	//5
+        int a=-5+8*6;
+        int b=(55+9)%9;
+        int c=20+(-3)*5/8;
+        int d=5+15/3*2-8%3;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+
+	//7-1
+	int s=10;
+        int t=20;
+        int temp=s;
+        s=t;
+        t=temp;
+        System.out.println("s="+s);
+        System.out.println("t="+t);
+
+	//8
+	int answer=a*a;
+        System.out.println("area="+answer);
+
+	//user input
+	Scanner pet=new Scanner(System.in);
+        System.out.println("enter 1st number:");
+        int j=pet.nextInt();
+        System.out.println("enter 1st number:");
+        int h=pet.nextInt();
+        System.out.println(a+b);
+
+	//user input -- combining two words
+	Scanner pet=new Scanner(System.in);
+        System.out.println("enter the word:");
+        String s1=pet.next();
+        pet.nextLine();
+        System.out.println("enter next word");
+        String s2=pet.nextLine();
+        System.out.println(s1+" "+s2);
+
+	//user-input -- combining more words
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the word:");
+        String s1=pet.nextLine();
+        //pet.nextLine();
+        System.out.println("enter next word");
+        String s2=pet.nextLine();
+        System.out.println("enter next word");
+        String s3=pet.nextLine();
+        System.out.println("enter next word");
+        String s4=pet.nextLine();
+        System.out.println(s1+" "+s2+" "+s3+" "+s4);
+
+	//area of circle
+	float pi=3.14f;
+        System.out.println("enter the number:");
+        float r=pet.nextFloat();
+        float area=pi*(r*r);
+        System.out.println("area of circle is"+" "+area);
+
+	//branching(if,else-if,else)
+	Scanner pet=new Scanner(System.in);
+        System.out.println("enter number 1:");
+        int a=pet.nextInt();
+        System.out.println("enter number 2:");
+        int b=pet.nextInt();
+        if(a>b){
+            System.out.println("a is greater");
+        }
+        else if(a==b){
+            System.out.println("a is equal to b");
+        }
+        else{
+            System.out.println("b is greater");
+	}
+
+	//separate given number
+	Scanner pet=new Scanner(System.in);
+        System.out.println("enter number 1:");
+        int a=pet.nextInt();
+        // System.out.println("enter number 2:");
+        // int b=pet.nextInt();
+        System.out.println(a%10);
+        System.out.println(a/10);
+
+	//nested-if
+	Scanner pet=new Scanner(System.in);
+        System.out.println("enter a:");
+        int a=pet.nextInt();
+        System.out.println("enter b:");
+        int b=pet.nextInt();
+        System.out.println("enter c:");
+        int c=pet.nextInt();
+        if(a>b){
+            System.out.println("a great");
+            if(a>c){
+                System.out.println("a great");
+            }
+            else{
+                System.out.println("c is great");
+            }
+        }
+        else if(b>c){
+            System.out.println("b is great");
+        }
+        else{
+            System.out.println("c great");
+        }
+
+	//calculator
+	Scanner pet=new Scanner(System.in);
+        System.out.println("enter a:");
+        int a=pet.nextInt();
+        System.out.println("enter b:");
+        int b=pet.nextInt();
+        System.out.println("enter choice:");
+        int c=pet.nextInt();
+        if(c==1){
+            System.out.println(a+b);
+        }
+        else if(c==2){
+            System.out.println(a-b);
+        }
+        else if(c==3){
+            System.out.println(a*b);
+        }
+        else if(c==4){
+            System.out.println(a/b);
+        }
+        else if(c==5){
+            System.out.println(a%b);
+        }
+        else{
+            System.out.println();
+        }
+    }
+}
