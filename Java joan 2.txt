@@ -1,0 +1,320 @@
+//switch
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enther the value");
+        int i1=pet.nextInt();
+        switch(i1){
+            case 1:
+                System.out.println("one");
+                break;
+            case 2:
+                System.out.println("two");
+                break;
+            case 3:
+                System.out.println("three");
+                break;
+            default:
+                System.out.println("three");
+
+        }
+    }
+}
+
+//print 1 to  100 in terms of 5
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        1
+        for(int i=1;i<=100;i++){
+            if(i%5==0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+//number till the given
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the units:");
+        int i1=pet.nextInt();
+        for(int a=1;a<=i1;a++){
+            System.out.println(a);
+        }
+    }
+}
+
+//sum of n integer
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the units:");
+        int a=pet.nextInt();
+        int t=0;
+        for(int i=1;i<=a;i++){
+            t=t+i;
+            //System.out.println(t);
+        }
+        System.out.println(t);
+        System.out.println(t/a);
+    }
+}
+
+//factorial
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the units:");
+        int a=pet.nextInt();
+        int t=1;
+        for(int i=1;i<=a;i++){
+            t=t*i;
+            System.out.println(t);
+        }
+        System.out.println(t);
+        System.out.println(t/a);
+    }
+}
+
+//multiplication table
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the units:");
+        int a=pet.nextInt();
+        //int t=1;
+        for(int i=1;i<=10;i++){
+            //t=t*i;
+            System.out.println(a+"*"+i+"="+a*i);
+        }
+        // System.out.println(t);
+        // System.out.println(t/a);
+    }
+}
+
+//fibanocci series
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int a=0;
+        int b=1;
+        for(int i=1;i<=10;i++){
+            int c=a+b;
+            System.out.println(a);
+            a=b;
+            b=c;
+        }
+    }
+}
+
+//separate the number
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int a=pet.nextInt();
+        while(a>0){
+            System.out.println(a%10);
+            a=a/10;
+        }
+        
+    }
+}
+
+//sum of given number
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner pet=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int a=pet.nextInt();
+        int sum=0;
+        while(a>0){
+            int t=a%10;
+            a=a/10;
+            sum=sum+t;
+        }
+        System.out.println(sum); 
+    }
+}
+
+//reverse ladder
+	int n=5;
+        for(int i=0;i<6;i++){
+            for(int j=0;j<=n;j++){
+                System.out.print(j);
+            }
+            n--;
+            System.out.println();
+        }
+
+//normal pattern
+	for(int i=0;i<6;i++){
+            for(int j=0;j<6;j++){
+                System.out.print(j);
+            }
+            //n--;
+            System.out.println();
+        }
+
+//normal pattern with same number
+	for(int i=0;i<6;i++){
+            for(int j=0;j<6;j++){
+                System.out.print(i);
+            }
+            //n--;
+            System.out.println();
+        }
+
+//opposite triangle
+	int n=5;
+        for(int i=1;i<6;i++){
+            for(int j=1;j<n;j++){
+                System.out.print(" ");
+            }
+            for(int k=1;k<=i;k++){
+                System.out.print(k);
+            }
+            n--;
+            System.out.println();
+        }
+
+output:
+    1
+   12
+  123
+ 1234
+12345
+
+//tree pattern
+	int n=5;
+        for(int i=1;i<6;i++){
+            for(int j=1;j<n;j++){
+                System.out.print(" ");
+            }
+            for(int k=1;k<=i;k++){
+                System.out.print(k+" ");
+            }
+            n--;
+            System.out.println();
+        }
+
+output:
+    1 
+   1 2 
+  1 2 3 
+ 1 2 3 4 
+1 2 3 4 5 
+
+//pattern
+	int n=5;
+        for(int i=1;i<6;i++){
+            for(int j=n;j>=1;j--){
+                System.out.print(j);
+            }
+            // for(int k=1;k<=i;k++){
+            //     System.out.print(k);
+            // }
+            n--;
+            System.out.println();
+        }
+
+output:
+54321
+4321
+321
+21
+1
+
+//pattern
+
+	int n=5;
+        for(int i=1;i<6;i++){
+            for(int j=5;j>=i;j--){
+                System.out.print(j);
+            }
+            // for(int k=1;k<=i;k++){
+            //     System.out.print(k);
+            // }
+            n--;
+            System.out.println();
+        }
+
+output:
+54321
+5432
+543
+54
+5
+
+//pattern
+	int b=1;
+        for(int i=1;i<6;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(b+" ");
+                b++;
+            }
+            // for(int k=1;k<=i;k++){
+            //     System.out.print(k);
+            // }
+            //n--;
+            System.out.println();
+        }
+
+output:
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+//sum of odd number 1 to 10
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // Scanner pet=new Scanner(System.in);
+        // System.out.println("number:");
+        // int a=pet.nextInt();
+        int sum=0;
+        for(int i=1;i<10;i++){
+            if(i%2!=0){
+                //System.out.println(i);
+                sum=sum+i;
+            }
+        }System.out.println(sum);
+    }
+}
+
+//7 series
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // Scanner pet=new Scanner(System.in);
+        // System.out.println("number:");
+        // int a=pet.nextInt();
+        int a=105;
+        while(a>=7){
+            System.out.println(a=a-7);
+            
+        }
+    }
+}

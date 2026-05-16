@@ -1,0 +1,207 @@
+//File create
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+			File f=new File("C:\\Users\\staff\\Desktop\\Files\\pet1.txt");
+			try {
+				f.createNewFile();
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+	}
+}
+
+//File write
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+			File f=new File("C:\\Users\\staff\\Desktop\\Files\\pet.txt");
+			FileWriter fw;
+			try {
+				fw = new FileWriter(f);
+				fw.write("Hi heba");
+				fw.flush();
+				fw.close();
+				System.out.println("writed");
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+	}
+
+}
+
+//File append
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+			File f=new File("C:\\Users\\staff\\Desktop\\Files\\pet.txt");
+			FileWriter fw;
+			try {
+				fw = new FileWriter(f,true);
+				fw.write("Hi petrina");
+				fw.write("petrina is studying");
+				fw.flush();
+				fw.close();
+				System.out.println("writed");
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+	}
+}
+
+
+/File read -- will give ASCII value only
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+			File f=new File("C:\\Users\\staff\\Desktop\\Files\\pet.txt");
+			FileReader fr;
+			try {
+				fr = new FileReader(f);
+				int a=fr.read();
+				System.out.println((char)a);
+				//will only read character by character
+				while(a!=-1) {
+					System.out.println(a);
+					a=fr.read();//till this only ASCII value will come
+				}
+				
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+	}
+}
+
+//square of the even digits and sum all digits
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+			
+			int a=12345;
+			int sum=0;
+			while(a>0) {
+				int t=a%10;
+				if(a%2==0) {	
+					sum+=t*t;
+				}
+				else {
+					sum=sum+t;
+				}
+				a=a/10;
+			}
+			System.out.println(sum);
+			
+	}
+}
+
+
+//String function -- split
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+			
+			String s="hello world java class";
+			String n[]=s.split("a");
+			for(String t:n) {
+				System.out.println(t);
+			}
+			
+	}
+}
+
+//OOPS -- constructor -- area and perimeter of rectangle
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+class Rectangle{
+//	int width=10;
+//	int height=20;
+	int width;
+	int height;
+	
+	Rectangle(int width,int height){
+		System.out.println("area is"+" "+width*height);
+		System.out.println("perimeter is"+" "+(2*(width*height)));
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("area is");
+		int a=s.nextInt();
+		System.out.println("perimeter is");
+		int b=s.nextInt();
+
+		Rectangle area=new Rectangle(a,b);
+	}
+			
+}
+
+//constructor with name and age
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+
+class Person{
+	String name;
+	int age;
+	
+	Person(String n,int ag){
+		System.out.println("name is"+" "+n);
+		System.out.println("age is"+" "+ag);
+	}
+	
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+	
+		
+		System.out.println("name is");
+		String a=s.nextLine();
+		System.out.println("age is");
+		int b=s.nextInt();
+		
+		Person st=new Person(a,b);
+		//Person i=new Person(c,d);
+	}
+}
+
+

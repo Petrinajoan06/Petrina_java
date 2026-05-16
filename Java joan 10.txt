@@ -1,0 +1,44 @@
+package Joan;
+
+import java.util.Scanner;
+import java.sql.*;
+public class sql {
+	void insert() throws Exception {
+		//jdbc
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/petrina","root","Petrina@06");
+		
+		String s="insert into details(roll,name,course,phone_nunber)"+"values(?,?,?,?)";
+		
+		//statement,prepare statement 
+		PreparedStatement state=con.prepareStatement(s);//mediator
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter roll number;");
+		int roll=sc.nextInt();
+		System.out.println("enter name;");
+		sc.nextLine();
+		String name=sc.nextLine();
+		System.out.println("enter course;");
+		String co=sc.nextLine();
+		System.out.println("enter phone number;");
+		long ph=sc.nextLong();
+		
+		state.setInt(1, roll);
+		state.setString(2, name);
+		state.setString(3, co);
+		state.setLong(4, roll);
+		state.executeUpdate();//execute, executeQuery
+		System.out.println("inserted sucessfully");	
+		
+	}
+	public static void main(String[] args){
+		sql pet=new sql();
+		try {
+			pet.insert();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

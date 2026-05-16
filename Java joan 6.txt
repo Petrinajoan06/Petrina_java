@@ -1,0 +1,100 @@
+//Login page
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+class Admin{
+	void login() {
+		System.out.println("Admin login page");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter mail id");
+		String s=sc.next();
+		System.out.println("enter password");
+		int p=sc.nextInt();
+		
+		if(p==123 && s.equals("admin")) {
+			System.out.println("admin login success");
+		}
+		else {
+			System.out.println("invalid login");
+		}
+	}
+}
+
+class Student{
+	void login() {
+		System.out.println("Student login page");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name");
+		String n=sc.next();
+		System.out.println("enter pin number");
+		int pin=sc.nextInt();
+		
+		if(n.equals("std") && pin==987) {
+			System.out.println("login successful");
+		}
+		else {
+			System.out.println("invalid login");
+		}
+	}
+}
+	
+
+public class Main extends Admin {
+	
+	Main(){
+		System.out.println("welcome to our clg app");
+		System.out.println("1. Admin login \n 2.Student login");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter your option");
+		int op=sc.nextInt();
+		
+		if(op==1) {
+			login();
+		}
+		else if(op==2) {
+			Admin s=new Admin();
+			s.login();
+		}
+
+	}
+	public static void main(String[] args) {
+		Main m=new Main();
+	}
+}
+
+//harshard number
+package Joan;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int a=sc.nextInt();
+		int sum=0;
+		int b=a;
+		int c;
+		while(a>0) {
+			int t=a%10;
+			a=a/10;
+			sum=sum+t;
+			
+		}
+		c=b%sum;
+		if(c==0) {
+			System.out.println("it is a harshad number ");
+		}
+		else {
+			System.out.println("it is not harshard number");
+		}
+		//System.out.println(c);
+		
+	}
+}
